@@ -86,11 +86,12 @@
 // Create the Factory class bellow:
 
 class Factory {
-  static massBuild(quantity, options) {
-    console.log('Building ' + 'quantity' + '' + 'color' + '' + 'trim' + '' + 'model');
+  static massBuild(quantity, color, trim, model) {
+
+    console.log('Building ' + quantity + ' ' + color + ' ' + trim + ' ' + model);
   }
   static customerBuild(color, options) {
-    console.log('Building one ' + 'color' + '' + 'trim' + '' + 'model');
+    console.log('Building ' + 'color' + '' + 'trim' + '' + 'model');
   }
 
   constructor () {
@@ -206,7 +207,12 @@ console.log(truck);
 
 // Write your 'mazda3' instance below:
 
-let mazda3 = new Car('Mazda3', 'red',);
+let mazda3 = new Car('Mazda3', 4, 'red', 'hybrid', 'automatic', 'leather', 'touring', 'premium', 'Leather', true);
+mazda3.wheels = 'Sport'
+mazda3.wheeltrim = 'Cool'
+mazda3.seats = 'Premium'
+
+
 
 // Print mazda3. I should have all the above properties.
 // Write your code below:
@@ -220,12 +226,18 @@ console.log(mazda3);
 // Write your code below:
 
 
+Factory.massBuild.call(mazda3, 35000, 'Red', 'Touring', "Mazda3's");
+
+
 
 
 
 // Print, calling customerBuild(), building one yellow mazda3 with the following options, as an array: weather package, satellite radio, rear spoiler.
 // It should read: "Building one yellow Touring Mazda3 with the following options: weather package, satellite radio, rear spoiler"
 // Write your code below:
+
+
+
 
 
 
@@ -239,13 +251,14 @@ console.log(mazda3);
 // Write your code below:
 
 
-
-
-
+let miataRf = new Sport('Miata-RF', 'Grand Touring', 'Manual', 'Hard Top', 'Red', 'Leather', 'Premium' )
+                          // model, trim, transmission, top, color, seatstrim, audio, wheeltrim, moonroof, enginetype, convertible, doors)
+miataRf.wheels = 'Premium'
+miataRf.warranty = '150,000 miles / 6 years'
 // Print miataRf. It should have all of the above properties. Plus, the extended warranty.
 // Write your code below:
 
-
+console.log(miataRf);
 
 
 
